@@ -21,7 +21,7 @@ public class ImportFile {
 	public static void main(String... args) {
 
 			Scanner scanner = new Scanner(System.in);
-		 	String fileToParse = "C:\\Dev\\workspaces\\stage-workspace\\articoli.csv";
+		 	String fileToParse = "articoli.csv";
 	        
 	        HashMap<String,NewArticolo> articolo = readDataFromCSV(fileToParse);
 	        for (Map.Entry entry : articolo.entrySet())
@@ -66,7 +66,7 @@ public class ImportFile {
 	            	String nextLine = System.getProperty("line.separator");
 	            	Writer writer;
 					try {
-						writer = new FileWriter("C:\\Dev\\workspaces\\stage-workspace\\nuovi-articoli.csv");
+						writer = new FileWriter("nuovi-articoli.csv");
 						for (Entry<String, NewArticolo> entry : articolo.entrySet()) {
 		    				writer.append(String.valueOf(entry.getValue().getId()))
 		    				.append(';')

@@ -15,7 +15,7 @@ public class ImportFile {
 	public static void main(String... args) {
 
 			Scanner scanner = new Scanner(System.in);
-		 	String fileToParse = "C:\\Dev\\workspaces\\stage-workspace\\articoli.csv";
+		 	String fileToParse = "articoli.csv";
 	        
 	        List<NewArticolo> articolo = readDataFromCSV(fileToParse);
 	        for (NewArticolo a : articolo) {
@@ -55,7 +55,7 @@ public class ImportFile {
 	            	String nextLine = System.getProperty("line.separator");
 	            	Writer writer;
 					try {
-						writer = new FileWriter("C:\\Dev\\workspaces\\stage-workspace\\nuovi-articoli.csv");
+						writer = new FileWriter("nuovi-articoli.csv");
 						for (NewArticolo a : articolo) {
 		    				writer.append(String.valueOf(a.getId()))
 		    				.append(';')
